@@ -12,11 +12,12 @@ public class BankAccount {
     }
 
     public boolean withdraw(double amount) {
-        // TODO:
-        // Withdraw the requested amount if sufficient funds are available.
-        // Return true if the withdrawal succeeds.
-        // Return false otherwise.
-        return false;
+        if (balance >= amount + 2){
+            balance -= (amount + 2);
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public String getAccountSummary() {
